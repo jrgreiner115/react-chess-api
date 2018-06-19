@@ -7,10 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-joe = User.create(name: "JOE", password:"ALSOJOE",wins: 0,losses:0)
-ryan = User.create(name: "RYAN", password:"ALSOJOE",wins: 0,losses:0)
-humzah = User.create(name: "HUMZAH", password:"ALSOJOE",wins: 0,losses:0)
-mike = User.create(name: "MIKE", password:"ALSOJOE",wins: 0,losses:0)
+# joe = User.create(name: "JOE", password:"ALSOJOE",wins: 0,losses:0)
+# ryan = User.create(name: "RYAN", password:"ALSOJOE",wins: 0,losses:0)
+# humzah = User.create(name: "HUMZAH", password:"ALSOJOE",wins: 0,losses:0)
+# mike = User.create(name: "MIKE", password:"ALSOJOE",wins: 0,losses:0)
 
-game1 = Game.create(player_id_white: 1, player_id_black: 2, current_game_board: "APPLESAUCE")
-game2 = Game.create(player_id_white: 3, player_id_black: 4, current_game_board: "APPLESAUCE")
+# game1 = Game.create(player_id_white: 1, player_id_black: 2, current_game_board: "{board:[
+#         ['rookB','bishopB','nightB','queenB','kingB','nightB','bishopB','rookB'],
+#         ['pawnB','pawnB','pawnB','pawnB','pawnB','pawnB','pawnB','pawnB'],
+#         ['','','','','','','',''],
+#         ['','','','','','','',''],
+#         ['','','','','','','',''],
+#         ['','','','','','','',''],
+#         ['pawnW','pawnW','pawnW','pawnW','pawnW','pawnW','pawnW','pawnW'],
+#         ['rookW','bishopW','nightW','queenW','kingW','nightW','bishopW','rookW']
+#       ]}")
+# game2 = Game.create(player_id_white: 3, player_id_black: 4, current_game_board: "APPLESAUCE")
+
+game1 = Game.create()
+game2 = Game.create()
