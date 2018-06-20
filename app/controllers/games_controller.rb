@@ -5,11 +5,13 @@ class GamesController < ApplicationController
   end
 
   def join
-    if Game.last
+    if Game.last.player_id_white && Game.last.player_id_black !== nil
       @game = Game.last
+      @game.update(player_id_black: User.last.id)
       render json: @game
     else
       @game = Game.create()
+      @game.update(player_id_white: User.last.id)
       render json: @game
     end
   end

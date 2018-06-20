@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :moves
   resources :games
-  # resources :users
+  resources :users
   get '/join', to: 'games#join'
   mount ActionCable.server => '/cable'
 
