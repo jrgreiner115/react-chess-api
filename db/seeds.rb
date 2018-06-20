@@ -23,6 +23,3 @@
 #         ['rookW','bishopW','nightW','queenW','kingW','nightW','bishopW','rookW']
 #       ]}")
 # game2 = Game.create(player_id_white: 3, player_id_black: 4, current_game_board: "APPLESAUCE")
-
-game1 = Game.create()
-game2 = Game.create()

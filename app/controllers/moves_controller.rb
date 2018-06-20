@@ -5,13 +5,14 @@ class MovesController < ApplicationController
   end
 
   def create
-    @move = Move.new(game_id: params[:game_id],]
+    move = Move.new(game_id: params[:game_id],
        previous_position: params[:previous_position], new_position: params[:new_position])
-
-     if @move.save
+     if move.valid?
        # WEBSOCKET IT TO OTHER PLAYER HERE
-       ActionCable.broadcast('my-room', @move)
-    render json: @move
+       move.save
+       ActionCable.server.broadcast('my-room', move)
+       render json: move
+    end
   end
 
   def update

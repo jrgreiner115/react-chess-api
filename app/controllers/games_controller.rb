@@ -4,9 +4,24 @@ class GamesController < ApplicationController
     render json: @games
   end
 
+  def join
+    if Game.last
+      @game = Game.last
+      render json: @game
+    else
+      @game = Game.create()
+      render json: @game
+    end
+  end
+
   def show
-    @game = Game.find(params[:id])
-    render json: @game
+    if Game.last
+      @game = Game.find(params[:id])
+      render json: @game
+    else
+      @game = Game.create()
+      render json: @game
+    end
   end
 
   def create

@@ -1,5 +1,5 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :player_id_white, :player_id_black
 
   # belongs_to :user_id, :class_name => 'User', :foreign_key => 'player_id_white';
   # belongs_to :user_id, :class_name => 'User', :foreign_key => 'player_id_black';
