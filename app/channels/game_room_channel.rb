@@ -1,6 +1,6 @@
 class GameRoomChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "./"
+    stream_from "my-room"
   end
 
   def unsubscribed
