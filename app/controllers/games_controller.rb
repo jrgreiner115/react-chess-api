@@ -4,17 +4,17 @@ class GamesController < ApplicationController
     render json: @games
   end
 
-  def join
-    if Game.last.player_id_white && Game.last.player_id_black !== nil
-      @game = Game.last
-      @game.update(player_id_black: User.last.id)
-      render json: @game
-    else
-      @game = Game.create()
-      @game.update(player_id_white: User.last.id)
-      render json: @game
-    end
-  end
+  # def join
+  #   if Game.last.player_id_white && Game.last.player_id_black !== nil
+  #     @game = Game.last
+  #     @game.update(player_id_black: User.last.id)
+  #     render json: @game
+  #   else
+  #     @game = Game.create()
+  #     @game.update(player_id_white: User.last.id)
+  #     render json: @game
+  #   end
+  # end
 
   def show
     if Game.last
@@ -27,14 +27,13 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create()
+    @game = Game.create(player_id_white: params[:player_id_white], player_id_black: params[:player_id_black])
       render json: @game
   end
 
   def update
-    # byebug
     @game = Game.find(params[:id])
-    @game.update(current_game_board: params[:current_game_board])
+    @game.update(player_id_black: params[:player_id_black])
       render json: @game
   end
 
