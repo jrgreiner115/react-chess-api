@@ -7,9 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# joe = User.create(name: "JOE", password:"ALSOJOE",wins: 0,losses:0)
-# ryan = User.create(name: "RYAN", password:"ALSOJOE",wins: 0,losses:0)
-# humzah = User.create(name: "HUMZAH", password:"ALSOJOE",wins: 0,losses:0)
+joe = User.create(name: "JOE")
+ryan = User.create(name: "RYAN")
+humzah = User.create(name: "HUMZAH")
+game1 = Game.create(player_id_white: 1, player_id_black: 2)
+game1 = Game.create(player_id_white: 3, player_id_black: null)
+# game2 = Game.create(player_id_white: 3, player_id_black: 4, current_game_board: "APPLESAUCE")
+# game2 = Game.create(player_id_white: 3, player_id_black: 4, current_game_board: "APPLESAUCE")
+# game2 = Game.create(player_id_white: 3, player_id_black: 4, current_game_board: "APPLESAUCE")
+
+
 # mike = User.create(name: "MIKE", password:"ALSOJOE",wins: 0,losses:0)
 
 # game1 = Game.create(player_id_white: 1, player_id_black: 2, current_game_board: "{board:[
