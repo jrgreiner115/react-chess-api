@@ -1,25 +1,7 @@
-# README
+#Rails Chess API
+======
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Rails API is used to run & serve moves via websocket for React Chess Game. You can find that front-end repo [here](https://github.com/jrgreiner115/react-chess-game).
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# chess-api
+Feel free to clone down and play with!
