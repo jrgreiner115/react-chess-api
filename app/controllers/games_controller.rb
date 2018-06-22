@@ -34,6 +34,7 @@ class GamesController < ApplicationController
   def update
     @game = Game.find(params[:id])
     @game.update(player_id_black: params[:player_id_black])
+      ActionCable.server.broadcast('game-validator', @game)
       render json: @game
   end
 
